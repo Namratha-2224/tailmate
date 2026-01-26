@@ -37,7 +37,7 @@ function Services({ user }) {
     },
     {
       title: "Dog Walking",
-      icon: "🐕‍🦺🚶🏻‍♀️",
+      icon: "🐕‍🦺",
       desc: "Daily walks with trusted handlers",
       duration: "30 mins",
       price: "₹299"
