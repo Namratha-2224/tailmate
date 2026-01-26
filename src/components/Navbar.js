@@ -23,7 +23,7 @@ function Navbar({ user, setUser, wishlistCount, cartCount }) {
     <div className="navbar">
       {/* LOGO */}
       <Link to="/" className="logo">
-        TailMate
+        TailMate🐾
       </Link>
 
       {/* RIGHT SIDE */}
