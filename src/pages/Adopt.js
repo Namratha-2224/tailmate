@@ -70,7 +70,7 @@ function Adopt({ user }) {
 
   return (
     <div className="page">
-      <h1>Adopt 🐶</h1>
+      <h1>Adopt🐶</h1>
       <p>Find loving dogs waiting for a home</p>
 
       <div

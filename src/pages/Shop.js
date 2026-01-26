@@ -83,7 +83,7 @@ function Shop({ user, cartItems, setCartItems, wishlist, setWishlist }) {
 
   return (
     <div className="page">
-      <h1>Shop 🛍️</h1>
+      <h1>Shop🛍️</h1>
       <p>Everything your dog needs for a happy life</p>
 
       <div className="shop-grid">

@@ -7,7 +7,7 @@ function Home() {
     <div className="home">
       <h1>Welcome to TailMate</h1>
       <p className="subtitle">
-        Everything your dog needs — adoption, care, and unconditional love 🐾
+        Everything your dog needs - adoption, care, and unconditional love 🐾
       </p>
 
       <div className="card-grid">

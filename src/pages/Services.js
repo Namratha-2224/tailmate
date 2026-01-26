@@ -46,7 +46,7 @@ function Services({ user }) {
 
   return (
     <div className="page">
-      <h1>Services 🐾</h1>
+      <h1>Services🐾</h1>
       <p>Care, comfort, and services your dog deserves</p>
 
       <div className="services-grid">
