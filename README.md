@@ -7,16 +7,15 @@ It provides a single platform where users can explore pets for adoption, find ne
 
 ## 🚀 Features
 
-- 🐶 Pet Adoption – Browse pets available for adoption  
-- 🛍️ Pet Shop – Shop for pet essentials and accessories  
-- 🏥 Nearby Hospitals – Find veterinary hospitals and clinics  
-- 📍 Locations – Explore pet services based on location  
-- 🧰 Services – Grooming, walking, training, and more  
-- 📱 Responsive Design – Works on mobile, tablet, and desktop  
+- Pet Adoption – Browse pets available for adoption  
+- Pet Shop – Shop for pet essentials and accessories  
+- Nearby Hospitals – Find veterinary hospitals and clinics  
+- Locations – Explore pet services based on location  
+- Services – Grooming, walking, training, and more
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Technologies Used
 
 - React.js  
 - React Router  
@@ -28,10 +27,18 @@ It provides a single platform where users can explore pets for adoption, find ne
 
 ## 🌐 Live Demo
 
-- 🔗 Live Website: https://tailmate.vercel.app  
-- 🔗 GitHub Repository: https://github.com/Namratha-2224/tailmate  
+- Live Website: https://tailmate.vercel.app  
+
+---
+## 🎯 Project Purpose
+
+The purpose of Tailmate is to design and develop a user-friendly pet care platform using React.  
+This project focuses on implementing smooth navigation and delivering a responsive interface that simulates a real-world web application.
 
 ---
 
-## 📂 Project Structure
-tailmate/ │── src/ │   ├── components/ │   ├── pages/ │   ├── assets/ │   ├── App.js │   └── index.js │── public/ │── package.json │── README.md
+## 👩‍💻 Author
+
+**Namratha Dirsumilli**  
+B.Tech – Artificial Intelligence & Data Science  
+Vishnu Institute of Technology
