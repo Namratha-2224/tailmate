@@ -27,7 +27,7 @@ It provides a single platform where users can explore pets for adoption, find ne
 
 ## 🌐 Live Demo
 
-- Live Website: https://tailmate.vercel.app  
+- Live Website: [https://tailmate.vercel.app  ](https://tailmate-ochre.vercel.app/)
 
 ---
 ## 🎯 Project Purpose
