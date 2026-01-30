@@ -12,14 +12,18 @@ function Cart({ cartItems }) {
         <p>Your cart is empty</p>
       ) : (
         <>
-          {cartItems.map((item, index) => (
-            <div key={index} className="service-card">
-              <h3>{item.name}</h3>
-              <p>₹{item.price} × {item.qty}</p>
-            </div>
-          ))}
+          {/* ✅ SAME GRID AS WISHLIST */}
+          <div className="shop-grid">
+            {cartItems.map((item, index) => (
+              <div key={index} className="service-card">
+                <h3>{item.name}</h3>
+                <p>₹{item.price}</p>
+                <p>Quantity: {item.qty}</p>
+              </div>
+            ))}
+          </div>
 
-          <h2>Total: ₹{total}</h2>
+          <h2 style={{ marginTop: "30px" }}>Total: ₹{total}</h2>
         </>
       )}
     </div>

@@ -19,30 +19,10 @@ function AdoptModal({ dog, onClose }) {
   }
 
   function handleSubmit(e) {
-  e.preventDefault();
-
-  const newRequest = {
-    dogName: dog.name,
-    breed: dog.breed,
-    age: dog.age,
-    ...formData,
-    date: new Date().toLocaleString()
-  };
-
-  const existingRequests =
-    JSON.parse(localStorage.getItem("adoptionRequests")) || [];
-
-  const updatedRequests = [...existingRequests, newRequest];
-
-  localStorage.setItem(
-    "adoptionRequests",
-    JSON.stringify(updatedRequests)
-  );
-
-  alert(`Adoption request saved for ${dog.name} 🐶`);
-  onClose();
-}
-
+    e.preventDefault();
+    alert(`Adoption request sent for ${dog.name} 🐶`);
+    onClose();
+  }
 
   return (
     <div className="modal-overlay">
