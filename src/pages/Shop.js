@@ -1,5 +1,6 @@
 import { useNavigate, useLocation } from "react-router-dom";
 import "./Page.css";
+import "./Shop.css";
 
 function Shop({ user, cartItems, setCartItems, wishlist, setWishlist }) {
   const navigate = useNavigate();
@@ -10,7 +11,7 @@ function Shop({ user, cartItems, setCartItems, wishlist, setWishlist }) {
     { name: "Chew Toy", price: 99, icon: "🦴" },
     { name: "Dog Collar", price: 299, icon: "🎀" },
     { name: "Pet Shampoo", price: 349, icon: "🧴" },
-    { name: "Dog Perfume", price: 399, icon: "🧴✨" },
+    { name: "Dog Perfume", price: 399, icon: "🌸" },
     { name: "Leash Rope", price: 259, icon: "🪢" },
     { name: "Feeding Bowl", price: 199, icon: "🍽️" },
     { name: "Dog Bed", price: 999, icon: "🛏️" },
@@ -23,9 +24,9 @@ function Shop({ user, cartItems, setCartItems, wishlist, setWishlist }) {
     { name: "Training Clicker", price: 149, icon: "🔔" },
     { name: "Dog Toothbrush", price: 129, icon: "🪥" },
     { name: "Pet Wipes", price: 229, icon: "🧻" },
-    { name: "Travel Water Bottle", price: 199, icon: "🚰" },
+    { name: "Travel Water Bottle", price: 199, icon: "🧴" },
     { name: "Dog Raincoat", price: 999, icon: "🌧️" },
-    { name: "Paw Balm", price: 279, icon: "🧴🐾" },
+    { name: "Paw Balm", price: 279, icon: "🐾" },
     { name: "Shopping Bag", price: 199, icon: "🛍️" }
   ];
 
@@ -83,16 +84,18 @@ function Shop({ user, cartItems, setCartItems, wishlist, setWishlist }) {
 
   return (
     <div className="page">
-      <h1>Shop🛍️</h1>
+      <h1>Shop 🛍️</h1>
       <p>Everything your dog needs for a happy life</p>
 
       <div className="shop-grid">
-        {products.map((p, i) => {
+        {products.map((p, index) => {
           const cartItem = cartItems.find(i => i.name === p.name);
           const wished = wishlist.some(i => i.name === p.name);
 
           return (
-            <div className="service-card" key={i}>
+            <div className="service-card" key={index}>
+              
+              {/* Wishlist */}
               <div
                 className="wishlist"
                 onClick={() => toggleWishlist(p)}
@@ -100,21 +103,27 @@ function Shop({ user, cartItems, setCartItems, wishlist, setWishlist }) {
                 {wished ? "❤️" : "🤍"}
               </div>
 
-              <div style={{ fontSize: "40px" }}>{p.icon}</div>
+              {/* Icon (fixed height via CSS) */}
+              <div className="product-icon">{p.icon}</div>
+
               <h3>{p.name}</h3>
               <p>₹{p.price}</p>
 
-              {!cartItem ? (
-                <button onClick={() => addToCart(p)}>
-                  Add to Cart
-                </button>
-              ) : (
-                <div className="qty-box">
-                  <button onClick={() => decreaseQty(p.name)}>−</button>
-                  <span>{cartItem.qty}</span>
-                  <button onClick={() => increaseQty(p.name)}>+</button>
-                </div>
-              )}
+              {/* Cart Area (fixed position) */}
+              <div className="cart-area">
+                {!cartItem ? (
+                  <button onClick={() => addToCart(p)}>
+                    Add to Cart
+                  </button>
+                ) : (
+                  <div className="qty-box">
+                    <button onClick={() => decreaseQty(p.name)}>−</button>
+                    <span>{cartItem.qty}</span>
+                    <button onClick={() => increaseQty(p.name)}>+</button>
+                  </div>
+                )}
+              </div>
+
             </div>
           );
         })}

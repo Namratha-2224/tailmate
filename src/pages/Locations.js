@@ -1,4 +1,4 @@
-import "./Page.css";
+import "./Locations.css";
 
 function Locations() {
   const hospitals = [
@@ -38,38 +38,43 @@ function Locations() {
   ];
 
   return (
-    <div className="page">
-      <h1>Locations📍</h1>
+    <div className="locations-page">
+      <h1>Locations 📍</h1>
       <p>Veterinary hospitals and adoption centers near you</p>
 
+      {/* HEADINGS */}
+      <div className="location-headings">
+        <h2>🏥 Veterinary Hospitals</h2>
+        <h2>🐾 Adoption Centers</h2>
+      </div>
+
+      <div className="location-divider"></div>
+
+      {/* ROW-WISE CARDS */}
       <div className="locations-grid">
-        {/* LEFT COLUMN - Hospitals */}
-        <div className="location-column">
-          <h2 className="column-title">🏥 Veterinary Hospitals</h2>
+        {hospitals.map((hospital, index) => {
+          const center = adoptionCenters[index];
 
-          {hospitals.map((hospital, index) => (
-            <div className="service-card" key={index}>
-              <h3>{hospital.name}</h3>
-              <span className="badge">Veterinary Hospital</span>
-              <p>{hospital.area}</p>
-              <p>📞 {hospital.contact}</p>
-            </div>
-          ))}
-        </div>
+          return (
+            <>
+              {/* Hospital Card */}
+              <div className="location-card" key={`h-${index}`}>
+                <h3>{hospital.name}</h3>
+                <span className="location-badge">Veterinary Hospital</span>
+                <p>{hospital.area}</p>
+                <p>📞 {hospital.contact}</p>
+              </div>
 
-        {/* RIGHT COLUMN - Adoption Centers */}
-        <div className="location-column">
-          <h2 className="column-title">🐾 Adoption Centers</h2>
-
-          {adoptionCenters.map((center, index) => (
-            <div className="service-card" key={index}>
-              <h3>{center.name}</h3>
-              <span className="badge">Adoption Center</span>
-              <p>{center.area}</p>
-              <p>📞 {center.contact}</p>
-            </div>
-          ))}
-        </div>
+              {/* Adoption Card */}
+              <div className="location-card" key={`a-${index}`}>
+                <h3>{center.name}</h3>
+                <span className="location-badge">Adoption Center</span>
+                <p>{center.area}</p>
+                <p>📞 {center.contact}</p>
+              </div>
+            </>
+          );
+        })}
       </div>
     </div>
   );

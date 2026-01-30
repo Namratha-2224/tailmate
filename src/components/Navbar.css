@@ -1,4 +1,4 @@
-/* NAVBAR CONTAINER */
+/* ================= NAVBAR ================= */
 .navbar {
   height: 80px;
   background: #fff6ea;
@@ -13,88 +13,72 @@
 .logo {
   font-size: 22px;
   font-weight: 700;
-  cursor: pointer;
   text-decoration: none;
   color: #000;
   display: flex;
   align-items: center;
+  gap: 6px;
 }
 
-/* RIGHT SIDE LINKS - Ensuring vertical baseline */
+/* DESKTOP LINKS */
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 20px; 
+  gap: 20px;
 }
 
-/* NAV LINKS */
 .nav-links a {
   text-decoration: none;
-  font-weight: 500;
   font-size: 15px;
   color: #222;
-  transition: color 0.2s ease;
-  display: flex;
-  align-items: center;
 }
 
 .nav-links a:hover {
   color: #e07a00;
 }
 
-/* LOGIN BUTTON */
+/* ================= LOGIN BUTTON (DESKTOP) ================= */
 .login-btn {
+  background: #e07a00;
+  color: white !important;
+  padding: 4px 8px;
+  border-radius: 16px;
   text-decoration: none;
+  font-size: 13px;
   font-weight: 500;
-  font-size: 15px;
-  color: #fff !important;
-  background-color: #e07a00;
-
-  padding: 3px 14px;    
-  border-radius: 20px;
-
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  line-height: 1; 
-
-  margin-top: -3px; 
-  transform: translateY(-4px); 
-  
-  transition: all 0.3s ease;
-  cursor: pointer;
+  line-height: 1;
+  transition: background 0.3s ease;
+  position: relative;
+  top:-2px
 }
 
 .login-btn:hover {
-  background-color: #d36f00;
-  transform: translateY(-4px); 
+  background: #d36f00;
 }
 
-/* ❤️ WISHLIST & 🛒 CART ICONS */
+/* ICONS */
 .nav-icon {
   display: flex;
   align-items: center;
   gap: 4px;
   font-size: 16px;
-  text-decoration: none;
   color: #222;
 }
 
-/* COUNT BADGE */
 .count {
   background: #e07a00;
   color: white;
   font-size: 11px;
   padding: 2px 6px;
   border-radius: 50%;
-  font-weight: 600;
 }
 
-/* 3 DOT MENU */
+/* MENU */
 .menu-wrapper {
   position: relative;
-  display: flex;
-  align-items: center;
 }
 
 .dots {
@@ -102,25 +86,26 @@
   cursor: pointer;
 }
 
-/* DROPDOWN MENU */
 .menu {
   position: absolute;
   right: 0;
   top: 40px;
   background: white;
   border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-  padding: 12px 16px;
+  padding: 12px;
   width: 180px;
-  z-index: 100;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
+.menu a,
 .menu p {
+  display: block;
   margin: 6px 0;
-  font-size: 14px;
-  cursor: pointer;
+  text-decoration: none;
+  color: #222;
 }
 
+.menu a:hover,
 .menu p:hover {
   color: #e07a00;
 }
@@ -129,13 +114,88 @@
   width: 100%;
   margin-top: 10px;
   padding: 6px;
-  border: none;
   border-radius: 8px;
-  background: #eee;
+  border: none;
   cursor: pointer;
 }
 
-.menu button:hover {
-  background: #e07a00;
-  color: white;
+/* ================= MOBILE NAVBAR (FINAL) ================= */
+@media (max-width: 768px) {
+
+  .navbar {
+    padding: 12px 16px;
+    background: #fff7ed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* Logo left */
+  .logo {
+    font-size: 18px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  /* Hide all links/icons */
+  .nav-links {
+    display: none;
+  }
+
+  /* Small orange login button (mobile) */
+  .login-btn {
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    position: relative;
+  top:-3px
+  }
+
+} 
+/* ================= MOBILE AFTER LOGIN ================= */
+@media (max-width: 768px) {
+
+  /* Hide desktop links on mobile */
+  .nav-links {
+    display: none;
+  }
+
+  /* Mobile right-side actions */
+  .mobile-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .mobile-actions .nav-icon {
+    font-size: 16px;
+  }
+
+  .mobile-actions .dots {
+    font-size: 22px;
+    cursor: pointer;
+  }
+
+  /* Dropdown menu for mobile */
+  .menu {
+    right: 0;
+    top: 36px;
+    width: 200px;
+  }
+
+  .menu a {
+    display: block;
+    margin: 6px 0;
+    text-decoration: none;
+    color: #222;
+    font-size: 14px;
+  }
+
+  .menu a:hover {
+    color: #e07a00;
+  }
 }
