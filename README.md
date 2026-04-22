@@ -39,6 +39,6 @@ This project focuses on implementing smooth navigation and delivering a responsi
 
 ## 👩‍💻 Author
 
-**Namratha Dirsumilli**  
-B.Tech – Artificial Intelligence & Data Science  
-Vishnu Institute of Technology
+- **Namratha Dirsumilli**
+- Artificial Intelligence & Data Science
+- Vishnu Institute of Technology
